@@ -1,8 +1,17 @@
 package AMS2.test.models;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name="animes")
 public class Animes {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name="id")
 	private Long anime_id;
+	@Column(name ="name")
 	private String nombre;
+	@Column(name ="num_Chapters")
 	private int num_Capitulos;
 	
 	// Contructores 
