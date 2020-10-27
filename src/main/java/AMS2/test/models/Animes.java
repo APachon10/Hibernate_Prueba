@@ -18,9 +18,8 @@ public class Animes {
 	public Animes() {
 		super();
 	}
-	public Animes(Long anime_id, String nombre, int num_Capitulos) {
+	public Animes(String nombre, int num_Capitulos) {
 		super();
-		this.anime_id = anime_id;
 		this.nombre = nombre;
 		this.num_Capitulos = num_Capitulos;
 	}
