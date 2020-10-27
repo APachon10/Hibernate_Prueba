@@ -1,4 +1,4 @@
-package AMS2.test.Implementations;
+package AMS2.test.Utils;
 
 import java.util.Properties;
 import org.hibernate.SessionFactory;
