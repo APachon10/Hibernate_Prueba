@@ -7,12 +7,14 @@ import javax.persistence.*;
 public class Animes {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name="id")
-	private Long anime_id;
+	@Column(name="anime_id")
+	private long anime_id;
 	@Column(name ="name")
 	private String nombre;
 	@Column(name ="num_Chapters")
 	private int num_Capitulos;
+	@Column(name = "Genero")
+	private String genero;
 	
 	// Contructores 
 	public Animes() {
@@ -22,21 +24,24 @@ public class Animes {
 		super();
 		this.nombre = nombre;
 		this.num_Capitulos = num_Capitulos;
+		this.genero = genero;
 	}
-	
 	// Getters
-	public Long getAnime_id() {
+	public long getAnime_id() {
 		return anime_id;
 	}
+
 	public String getNombre() {
 		return nombre;
 	}
 	public int getNum_Capitulos() {
 		return num_Capitulos;
 	}
-	
+	public String getGenero() {
+		return genero;
+	}
 	//Setters
-	public void setAnime_id(Long anime_id) {
+	public void setAnime_id(long anime_id) {
 		this.anime_id = anime_id;
 	}
 	public void setNombre(String nombre) {
@@ -45,11 +50,14 @@ public class Animes {
 	public void setNum_Capitulos(int num_Capitulos) {
 		this.num_Capitulos = num_Capitulos;
 	}
-	
-	// ToString
+	public void setGenero(String genero) {
+		this.genero = genero;
+	}
 	@Override
 	public String toString() {
-		return "ID: " + anime_id + ", Name: " + nombre + ", num_Capitulos:" + num_Capitulos;
+		return "Animes [anime_id=" + anime_id + ", nombre=" + nombre + ", num_Capitulos=" + num_Capitulos + ", genero="
+				+ genero + "]";
 	}
+
 	
 }
