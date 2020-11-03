@@ -3,12 +3,10 @@ package AMS2.test.demo;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
-import AMS2.test.Utils.HibernateUtil;
-import AMS2.test.models.Animes;
+import AMS2.test.Utils.HibernateUtil;;
 
 public class TestAnimes {
-	public static void main(String[] args) {
-		Animes a = new Animes("UBW",24,"Romance,Peleas,Historia,Santo Grial,Seinen");
+	/*public static void main(String[] args) {
 		Transaction t = null;
 		try(Session session = HibernateUtil.getSessionFactory().openSession()){            
 			t = session.beginTransaction();
@@ -17,6 +15,6 @@ public class TestAnimes {
 		}catch(Exception e) {
 			e.printStackTrace();
 		}
-	}
+	}*/
 	
 }
