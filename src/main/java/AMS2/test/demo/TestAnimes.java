@@ -8,7 +8,7 @@ import AMS2.test.models.Animes;
 
 public class TestAnimes {
 	public static void main(String[] args) {
-		Animes a = new Animes("UBW",24);
+		Animes a = new Animes("UBW",24,"Romance,Peleas,Historia,Santo Grial,Seinen");
 		Transaction t = null;
 		try(Session session = HibernateUtil.getSessionFactory().openSession()){            
 			t = session.beginTransaction();

@@ -13,6 +13,7 @@ public class Animes {
 	private String nombre;
 	@Column(name ="num_Chapters")
 	private int num_Capitulos;
+	@ManyToMany
 	@Column(name = "Genero")
 	private String genero;
 	
@@ -20,12 +21,13 @@ public class Animes {
 	public Animes() {
 		super();
 	}
-	public Animes(String nombre, int num_Capitulos) {
+	public Animes(String nombre, int num_Capitulos, String genero) {
 		super();
 		this.nombre = nombre;
 		this.num_Capitulos = num_Capitulos;
 		this.genero = genero;
 	}
+
 	// Getters
 	public long getAnime_id() {
 		return anime_id;
