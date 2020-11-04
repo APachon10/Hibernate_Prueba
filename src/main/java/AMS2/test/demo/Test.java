@@ -14,8 +14,10 @@ public class Test {
 		
 		/* new HighSchool*/
 		IDepartment dep_Manager = new DepartmentImpl();
-		dep_Manager.insertDepartment(new Department("Gestion"));
-		dep_Manager.insertDepartment(new Department("Entretenimiento"));
+		//dep_Manager.insertDepartment(new Department("Gestion"));
+		//dep_Manager.insertDepartment(new Department("Entretenimiento"));
+		
+		dep_Manager.getallDepartments();
 	}
 	
 }

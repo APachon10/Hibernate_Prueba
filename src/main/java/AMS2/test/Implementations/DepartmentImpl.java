@@ -16,15 +16,14 @@ public class DepartmentImpl implements IDepartment{
 		Transaction t = null;
 		try(Session session = HibernateUtil.getSessionFactory().openSession()){            
 			t = session.beginTransaction();
-			
 			session.createCriteria(Department.class).list();
-			
 			t.commit();
 			return list;
 		}catch(Exception e2) {
 			e2.printStackTrace();
+			return null;
 		}
-		return null;
+		
 	}
 	@Override
 	public Department getDepartmentbyId(int departmentId) {
